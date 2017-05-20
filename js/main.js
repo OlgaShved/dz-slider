@@ -1,10 +1,11 @@
 $(document).ready(function(){
 	$('.ba-slider').slick({
-	 	slidesToShow: 3,
+	 	/*centerMode: true,
+		centerPadding: '60px', по центру. но тогда прокручивает по одному слайду*/
+		slidesToShow: 3,
 		slidesToScroll: 3,
 		speed: 100,
   		infinite:true,
-		centerMode:true,
 		slide: ".slide-show",
 		prevArrow: ".ba-slider__prev",
 		nextArrow: ".ba-slider__next",
