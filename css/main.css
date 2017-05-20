@@ -1,5 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
 
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?m8f37x');
+  src:  url('../fonts/icomoon.eot?m8f37x#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?m8f37x') format('truetype'),
+    url('../fonts/icomoon.woff?m8f37x') format('woff'),
+    url('../fonts/icomoon.svg?m8f37x#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -25,7 +60,7 @@ img{
 }
 
 .ba-container{
-	max-width: 1300px;
+	max-width: 1500px;
 	width: 100%;
 	margin: auto;
 	padding: 0 10px;
@@ -41,10 +76,11 @@ img{
 }
 
 .ba-slider {
-	max-width: 1300px;
+    position: relative;
+	max-width: 1500px;
 	width: 100%;
 	margin: 0 auto 130px;
-	padding: 0 10px;
+	padding: 0 100px;
 }
 
 h1 {
@@ -61,86 +97,51 @@ h3 {
 	line-height: 1.06;
 }
 
-.ba-slider div {
+.slide-show {
 	padding: 0 20px;
 	outline: none;
 }
 
+
 /* Arrows */
-.slick-prev, .slick-next {
-    font-size: 0;
+
+.ba-slider__prev,
+.ba-slider__next {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 50px;
     z-index: 2;
-    line-height: 0;
+    line-height: 1;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    display: block;
+    outline: none;
+}
+
+.prev--left {
+    left: 1%;
+}
+
+.next--right {
+    right: 1%;
+}
+
+.slide-btn {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.3);
+    text-align: center;
     width: 70px;
     height: 70px;
-	padding: 0;
-
-    border-radius: 50%;
-    opacity: .4;
-    border: 2px solid #000;
     outline: none;
-    background: #fff;
 }
 
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
-{
-    color: #000;
-    outline: none;
-    background: #fff;
+
+.slide-btn:hover,
+.slide-btn:focus {
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(120, 255, 255, 0.5);
     cursor: pointer;
-	opacity: 0.6;
+    outline: none;
 }
-
-
-.slick-prev:before,
-.slick-next:before
-{
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-
-    opacity: .8;
-    color: white;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-	float: left;
-	clear: both;
-}
-
-.slick-prev:before {
-    content: url('../img/Layers.png');
-    top: 20%;
-    left: 20%;
-}
-
-.slick-next {
-    right: 20px;
-}
-[dir='rtl'] .slick-next
-{
-    right: auto;
-    left: 20px;
-}
-
-.slick-next:before {
-    content: url('../img/LayerR.png');
-    top: 20%;
-    left: 20%;
-}
-
-
-
-
-
-

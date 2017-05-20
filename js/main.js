@@ -4,6 +4,10 @@ $(document).ready(function(){
 		slidesToScroll: 3,
 		speed: 100,
   		infinite:true,
+		centerMode:true,
+		slide: ".slide-show",
+		prevArrow: ".ba-slider__prev",
+		nextArrow: ".ba-slider__next",
   		responsive: [
   			{
   				breakpoint: 1024,
@@ -14,6 +18,10 @@ $(document).ready(function(){
 		  			infinite:true
   				}
   			}
-  		]
+  		] // на экране шириной менее 1024
 	});
+
+	$('.slide-btn').on('mouseleave', function(){
+		$(this).blur();
+	}); // убираем фокус, если мышку увели и не нажали в другом месте
 });
